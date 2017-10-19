@@ -1,20 +1,23 @@
+https://travis-ci.org/atonui/yummy-recipes.svg?branch=master
 # yummy-recipes
+Yummy recipes is a platform for users to keep track of their recipes
+
 #App Features
-The app will have the following features:
+The app has the following features
 -Users can create accounts
 -Users can log in
 -Users can create, view, update and delete recipe categories
 -Users can create, view, update or delete recipes in existing categories
--you can view the raw site via github pages on: https://atonui.github.io/yummy-recipes/designs/UI/index.html
+-you can view the site via github pages on: https://atonui.github.io/yummy-recipes/designs/UI/index.html
 
 #Prerequisites
 -download bootstrap 4 from here: https://v4-alpha.getbootstrap.com/
 -Text editor (I used VSCode)
 
 #Installation
--create a project folder with the name 'yummy recipes'
--create a folder 'designs' then 'UI' in the project folder i.e. yummy recipes>designs>UI
--unzip the bootstrap files in the folder 'UI'
+-clone or download the repo
+-navigate to yummy-recipes>design>UI>index.html
+-browse the site as you would any other.
 
 #Built With
 -Bootstrap
@@ -23,8 +26,13 @@ The app will have the following features:
 -currently in UI design i.e. just the layout design and linking of pages
 -you can test by clicking buttons and resizing your screen to see how responsive it is
 
+#To Do
+-implement backend with python Flask
+-improve UI
+-recipe categories?
+
 #Licence
 -see licence file
 
-#Acknowledge
+#Acknowledgement
 -Andela peeps for this opportunity!
