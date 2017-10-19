@@ -1,3 +1,4 @@
+https://travis-ci.org/atonui/yummy-recipes.svg?branch=master
 # yummy-recipes
 Yummy recipes is a platform for users to keep track of their recipes
 
