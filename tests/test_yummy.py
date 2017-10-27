@@ -1,6 +1,9 @@
 """script to test users module in app"""
 import unittest
 
+from app.users import User
+from app.users import userList
+
 class YummyRecipeTests(unittest.TestCase):
     """test class for users"""
 
