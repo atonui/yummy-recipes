@@ -18,3 +18,7 @@ class YummyRecipeTests(unittest.TestCase):
     def test_user_created(self):
         """test if user has been created"""
         self.assertTrue(self.user_email in self.test_user.keys())
+
+    def test_duplicate_user(self):
+        duplicate_user = self.new_user.add_user(self.user_email,"mimi","pass123")
+        self.assertEqual(duplicate_user,"The email is already in use.")
