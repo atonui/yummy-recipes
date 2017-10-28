@@ -9,7 +9,7 @@ class YummyRecipeTests(unittest.TestCase):
 
     def setUp(self):
         self.new_user = User()
-        self.current_user = userList()
+        self.current_user = userList
         self.user_email = "me@me.com"
         self.username = "me"
         self.password = "meawww"
