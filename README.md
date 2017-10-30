@@ -24,17 +24,17 @@ The app has the following features
 -Bootstrap
 -Flask-Python
 
-#Testing
+# Testing
 -currently in UI design i.e. just the layout design and linking of pages
 -you can test by clicking buttons and resizing your screen to see how responsive it is
 
-#To Do
+# To Do
 -implement backend with python Flask
 -improve UI
 -recipe categories?
 
-#Licence
+# Licence
 -see licence file
 
-#Acknowledgement
+# Acknowledgement
 -Andela peeps for this opportunity!
