@@ -9,7 +9,7 @@
     <title>Yummy Recipes</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url_for('static',filename ='css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,52 +18,55 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="background-image:url(images/cover.jpg)">
-        <div class="container">
+  <body style="background-image:url(static/images/cover.jpg)">
+      
+      <div class="container">
+          
         <nav class="navbar navbar-toggleable-md navbar-light bg-info">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Yummy Recipes</a>
+                <a class="navbar-brand" href="{{url_for('index')}}">Yummy Recipes</a>
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home</span></a>
+                      <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="signup.html">Sign up <span class="sr-only">(current)</a>
+                      <a class="nav-link" href="{{url_for('signup')}}">Sign up</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="recipes-list.html">Recipes</a>
-                          </li>
+                        <a class="nav-link" href="recipes-list.html">Recipes</a>
+                      </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+                
                 </div>
               </nav>
-        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  
-  <button type="submit" class="btn btn-info">Submit</button>
-</form>
-<nav class="navbar fixed-bottom navbar-light bg-info">
-        <p class="text-center">&copy 2017 | Allan Koech</p>
-      </nav> 
-</div>
+
+            </br>         
+               <ol class="breadcrumb">
+               <li class="breadcrumb-item active">Home</li>
+               </ol>          
+
+              <div class="jumbotron">
+                    <h1 class="display-3">Hey there gourmet!</h1>
+                    <p class="lead">This is where you can share and keep track of all you lovely recipes.</p>
+                    <hr class="my-4">
+                    <p>We built this especially for you</p>
+                    <p class="lead">
+                      <a class="btn btn-info btn-lg" href="{{url_for('signup')}}" role="button">Sign up</a>
+                      <a class="btn btn-info btn-lg" href="{{url_for('login')}}" role="button">Log in</a>
+                    </p>
+              </div>  
+
+                  <nav class="navbar fixed-bottom navbar-light bg-info">
+                      <p class="text-center">&copy 2017 | Allan Koech</p>
+                    </nav>        
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
   </body>
 </html>

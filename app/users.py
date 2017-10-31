@@ -1,23 +1,25 @@
 """user management script"""
-USERLIST = {}
+USERLIST = []
 
-class User(object):
-    def __init__(self, email=None, username=None, password=None):
+class Users(object):
+    def __init__(self, email=None, password=None):
         self.email = email
-        self.username = username
         self.password = password
+        
 
-    def add_user(self, email, username, password):
-        if email not in USERLIST:
-            USERLIST[email] = {"email":email, "username":username, "password":password}
-            return USERLIST
+    def add_user(self, email, password):
+        global USERLIST
+        for item in USERLIST:
+            if email not in item['emailAddress']:
+                USERLIST.append({"emailAddress":email,"passwordValue":password})
+                return True
         else:
-            return "The email address is already in use."
+            return False
 
-    def fetch_user(self, email=None, password=None, users=None):
-        if email in USERLIST:
-            current_user = USERLIST[email]
-            if current_user["password"] == password:
-                return current_user
+    def fetch_user(self, email=None, password=None,):
+        for item in USERLIST:
+            if item["emailAddress"] == email and item["passwordValue"] == password:
+                return True
             else:
-                return "Non existent user"
+                return False
+                break
