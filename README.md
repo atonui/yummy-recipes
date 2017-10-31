@@ -1,4 +1,5 @@
-https://travis-ci.org/atonui/yummy-recipes.svg?branch=master
+[![Coverage Status](https://coveralls.io/repos/github/atonui/yummy-recipes/badge.svg?branch=challenge_2)](https://coveralls.io/github/atonui/yummy-recipes?branch=challenge_2)
+[![Build Status](https://travis-ci.org/atonui/yummy-recipes.svg?branch=master)](https://travis-ci.org/atonui/yummy-recipes)
 # yummy-recipes
 Yummy recipes is a platform for users to keep track of their recipes
 
