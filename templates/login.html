@@ -18,7 +18,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="background-image:url(static/images/cover.jpg)">
+  <body>
     
         <div class="container">
         <nav class="navbar navbar-toggleable-md navbar-light bg-info">
@@ -49,8 +49,9 @@
             <li class="breadcrumb-item active">Log in</li>
             </ol> 
 
-              <form action="{{url_for('dashboard')}}" method="POST">
+              <form action="{{url_for('loginsuccess')}}" method="POST">
                 <div class="form-group">
+                    
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email_name" required>
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -58,8 +59,8 @@
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
-                </div>
-                
+                  {{text | safe}} 
+                </div>               
                 <button type="submit" class="btn btn-info">Submit</button>
               </form>
                   <nav class="navbar fixed-bottom navbar-light bg-info">
