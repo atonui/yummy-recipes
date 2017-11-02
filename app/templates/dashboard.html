@@ -44,11 +44,15 @@
 
                 <form action="{{url_for('addRecipe')}}" method="POST">
                   <div class="form-group">
-                      <label for="exampleInputText1">Recipe Category</label>
-                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Cartegory"name="categoryName">  
-                      <label for="exampleInputText1">Recipe Title</label>
-                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Recipe Title" name="recipeTitle">
-                  </div>
+                      <label for="exampleInputText1"><strong>Category</strong></label>
+                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Enter cartegory name"name="category">  
+                      <label for="exampleInputText1"><strong>Recipe Title</strong></label>
+                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Enter recipe title" name="recipe_title">
+                      </br>
+                      <button type="submit" class="btn btn-info">Create Category</button>
+                  </div>             
+                
+              </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>

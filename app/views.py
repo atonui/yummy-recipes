@@ -6,7 +6,7 @@ from app import app
 
 app.secret_key = "K!funguo51R1"
 
-#session = {}
+USERLIST.clear()
 
 @app.route('/')
 def index():
@@ -23,7 +23,7 @@ def signupsuccess():
         password = request.form["password"]
         username = request.form["username"]
         name = request.form["name"]
-        user = Users(email, password, username, name)
+        user = Users("email@email.com", "password", "username", "name")
         if user.fetch_user(email, password) is True:
             print("This is the signup userlist",USERLIST)
             return render_template("signup.html", text="That user already exists.")
@@ -38,7 +38,7 @@ def loginsuccess():
     if request.method == 'POST':
         email = request.form["email_name"]
         password = request.form["password"]
-        user2 = Users(email, password,None, None)
+        user2 = Users(email, password, None, None)
         if user2.fetch_user(email, password) is True:
             print(user2)
             session['logged_in'] = True
@@ -53,7 +53,9 @@ def addRecipe():
     lastUser = {}
     lastUser = USERLIST[-1]
     user3 = Users(lastUser["email"], lastUser["password"], lastUser["username"], lastUser["name"])
-    user3.add_recipe(title, category)    
+    user3.add_recipe(title, category)
+    print(user3.category)   
+    print(lastUser)
     return render_template("index.html")
 
 @app.route('/signup/')
