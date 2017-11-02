@@ -1,4 +1,4 @@
 """Application configuration"""
 
 DEBUG = True
-SECRET_KEY = "sjW&*kjVY62"
+SECRET_KEY = "K!funguo51R1"

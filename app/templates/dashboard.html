@@ -17,8 +17,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+  
   </head>
-  <body style="background-image:url(static/images/cover.jpg)">
+  <body>
         <div class="container">
         <nav class="navbar navbar-toggleable-md navbar-light bg-info">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,11 +32,9 @@
                     <li class="nav-item active">
                       <a class="nav-link" href="{{url_for('index')}}">Home</span></a>
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="recipes-list.html">Recipes<span class="sr-only">(current)</a>
-                          </li>
                   </ul>
                 </div>
+                <a href="{{url_for('logout')}}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
               </nav>
             </br>
 
@@ -43,27 +42,13 @@
                   <li class="breadcrumb-item active">Dashboard</li>
                 </ol>
 
-              <div class="row">
-                  <div class="col-sm-6">
-                    <div class="card">
-                      <div class="card-block">
-                        <h3 class="card-title">Special title treatment</h3>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
+                <form action="{{url_for('addRecipe')}}" method="POST">
+                  <div class="form-group">
+                      <label for="exampleInputText1">Recipe Category</label>
+                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Cartegory"name="categoryName">  
+                      <label for="exampleInputText1">Recipe Title</label>
+                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Recipe Title" name="recipeTitle">
                   </div>
-                  <div class="col-sm-6">
-                    <div class="card">
-                      <div class="card-block">
-                        <h3 class="card-title">Special title treatment</h3>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
