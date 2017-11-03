@@ -7,6 +7,6 @@ class Categories(object):
     """module to initialise recipe"""
     def __init__(self, title, description):
         self.title = title
-        self.description
+        self.description = description
         self.recipes = []
        
