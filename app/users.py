@@ -17,13 +17,13 @@ class Users():
     #def current_User(self):
         #return currentUser = USERLIST[-1]
         
-    # def add_user(self, email, password, username, name):
-    #     for item in USERLIST:
-    #         if email not in item["email"]:
-    #             USERLIST.append({"email":email,"password":password,"username":username,"name":name})
-    #             return True
-    #         else:
-    #             return False
+    def add_user(self, email, password, username, name):
+         for item in USERLIST:
+             if email not in item["email"]:
+                 USERLIST.append({"email":email,"password":password,"username":username,"name":name})
+                 return True
+             else:
+                 return False
 
     # def fetch_user(self, email, password):
     #     for item in USERLIST:
