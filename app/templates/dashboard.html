@@ -42,12 +42,12 @@
                   <li class="breadcrumb-item active">Dashboard</li>
                 </ol>
 
-                <form action="{{url_for('addRecipe')}}" method="POST">
+                <form action="{{url_for('addCategory')}}" method="POST">
                   <div class="form-group">
-                      <label for="exampleInputText1"><strong>Category</strong></label>
+                      <label for="exampleInputText1">Category</label>
                       <input type="text" class="form-control" id="exampleInputText1" placeholder="Enter cartegory name"name="category">  
-                      <label for="exampleInputText1"><strong>Recipe Title</strong></label>
-                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Enter recipe title" name="recipe_title">
+                      <label for="exampleInputText1">Description</label>
+                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Enter a description" name="recipe_title">
                       </br>
                       <button type="submit" class="btn btn-info">Create Category</button>
                   </div>             

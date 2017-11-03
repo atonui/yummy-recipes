@@ -1,10 +1,12 @@
 """class to manage user categories"""
+from .recipes import Recipes
 
 CATEGORYLIST = []
 
-class Categories():
+class Categories(object):
     """module to initialise recipe"""
-    def __init__(self, title, recipes):
+    def __init__(self, title, description):
         self.title = title
-        self.recipes = {}
+        self.description
+        self.recipes = []
        
