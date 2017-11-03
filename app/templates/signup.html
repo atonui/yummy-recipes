@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Yummy Recipes</title>
+
+    <!-- Bootstrap -->
+    <link href="{{url_for('static',filename ='css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-info">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="{{url_for('index')}}">Yummy Recipes</a>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{{url_for('index')}}">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('signup')}}">Sign up <span class="sr-only">(current)</a>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </nav>
+            </br>         
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Sign Up</li>
+            </ol> 
+        
+              <form action="{{url_for('signupsuccess')}}" method="POST">
+                  <div class="form-group">
+                      <label for="exampleInputText1">Full name</label>
+                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Full name"name="name">  
+                      <label for="exampleInputText1">Username</label>
+                      <input type="text" class="form-control" id="exampleInputText1" placeholder="Username" name="username">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email_name" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                    {{text | safe}}
+                  </div>
+                  
+                  <button type="submit" class="btn btn-info">Submit</button>
+                </form>
+<nav class="navbar fixed-bottom navbar-light bg-info">
+        <p class="text-center">&copy 2017 | Allan Koech</p>
+      </nav> 
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
