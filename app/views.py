@@ -23,17 +23,19 @@ def signupsuccess():
     username = request.form["username"]
     name = request.form["name"]
     print(USERLIST)
-    
-    if USERLIST:
-        for item in USERLIST:
-            if email == item.email and password == item.password:
-                print("This is the signup userlist", USERLIST)
-                return render_template("signup.html", text="That user already exists.")           
-    else:
-        user = Users(email, password, username, name)
-        USERLIST.append(user)
-        print("This is the full userlist", USERLIST)
-        return render_template("login.html")
+    try:
+        if USERLIST:
+            for item in USERLIST:
+                if email == item.email and password == item.password:
+                    print("This is the signup userlist", USERLIST)
+                    return render_template("signup.html", text="That user already exists.")           
+        else:
+            user = Users(email, password, username, name)
+            USERLIST.append(user)
+            print("This is the full userlist", USERLIST)
+            return render_template("login.html")
+    except:
+        return render_template("error.html")
         
 @app.route("/loginsuccess", methods = ['POST'])
 def loginsuccess():
@@ -53,15 +55,19 @@ def loginsuccess():
 def addCategory():
     description = request.form["category"]
     title = request.form["recipe_title"]
-    currentUser = USERLIST[-1]
+    try:
+        currentUser = USERLIST[-1]
+    
     # user3 = Users(lastUser["email"], lastUser["password"], lastUser["username"], lastUser["name"])
     # user3.add_recipe(title, category)
     # print(user3.category)   
     # print(lastUser)
-    new_category = Categories(title, description)
-    currentUser.category.append(new_category)
+        new_category = Categories(title, description)
+        currentUser.category.append(new_category)
+        return render_template("categories.html", value = title, value2 = description)
+    except:
 
-    return render_template("index.html")
+        return render_template("error.html")
 
 @app.route('/signup/')
 def signup():
